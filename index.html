@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pokedex flow</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<p>Hi max, this is a rough userflow chart to show what pages the user will see and roughly what content will be on each page. At points where the user interacts I included what kind of action in square brackets. The ugly red "home" is the sticky nav, the mechanics of which I have not decided on. I just wanted to get the idea of what information is on each page, and the connections between pages. The headers appear on the page as the title (except for home), and the list elements are the contents of the page.</p>
+
+<h1 class="button home">home</h1>
+<div class="home">
+<h1>home</h1>
+<ul>
+	<li class="button regions">regions - link to region dex [click]</a></li>
+	<li class="button types">types - link to types page [click]</li>
+	<li class="button abilities">abilities - link to abilities list [click]</li>
+	<li class="button moves">moves - link to moves list [click]</li>
+	<li class="button pokemonSearch">pokemon - link to search options [click]</li>
+</ul>
+</div>
+<!--REGIONS-->
+<div class="regions">
+<h2>Regions</h2>
+	<ul>
+		<li class="button aRegion">some region - link to a region dex [click]</li>
+		<li class="button aRegion">some region - link to a region dex [click]</li>
+		<li class="button aRegion">some region - link to a region dex [click]</li>
+	</ul>
+</div>
+<div class="aRegion">
+<h2>Some Region</h2>
+	<ul>
+		<li class="button pokemon">some pokemon from this region - link to their pages [click]</li>
+		<li class="button pokemon">some pokemon from this region - link to their pages [click]</li>
+		<li class="button pokemon">some pokemon from this region - link to their pages [click]</li>
+		<li class="button pokemon">some pokemon from this region - link to their pages [click]</li>
+	</ul>
+</div>
+<!--TYPES-->
+<div class="types">
+<h2>Types</h2>
+	<ul>
+		<li>default matchup chart</li>
+		<li>matchup calculator</li>
+		<li class="button typePage">list of types - link to specific type page [click]</li>
+		<li class="button typePage">list of types - link to specific type page [click]</li>
+		<li class="button typePage">list of types - link to specific type page [click]</li>
+
+	</ul>
+</div>
+<div class="typePage">
+<h2>Some Type</h2>
+	<ul>
+		<li>specific matchup chart</li>
+		<li class="button pokemon">pokemon with this type - organized by pure, primary, secondary [click]</li>
+		<li class="button pokemon">pokemon with this type - organized by pure, primary, secondary [click]</li>
+		<li class="button pokemon">pokemon with this type - organized by pure, primary, secondary [click]</li>
+		<li class="button pokemon">pokemon with this type - organized by pure, primary, secondary [click]</li>
+	</ul>
+</div>
+<!--ABILITIES-->
+<div class="abilities ">
+<h2>Abilities</h2>
+	<ul>
+		<li>search abilities [TEXT INPUT]
+		<ul>
+			<li>prompt if string is empty or contains numbers</li>
+			<li>error message if no matching ability</li>
+			<li class="button abilityPage">list abilities containing string - link to their pages [click]</li>
+			<li class="button abilityPage">list abilities containing string - link to their pages [click]</li>
+		</ul>
+		</li>
+		<li class="button abilityPage">alphabetical list of abilities [click]</li>
+		<li class="button abilityPage">alphabetical list of abilities [click]</li>
+		<li class="button abilityPage">alphabetical list of abilities [click]</li>
+		<li class="button abilityPage">alphabetical list of abilities [click]</li>
+	</ul>
+</div>
+<div class="abilityPage">
+<h2>Some Ability</h2>
+	<ul>
+		<li>name</li>
+		<li>effect entry</li>
+		<li class="button pokemon">list of pokemon with this ability [click]</li>
+		<li class="button pokemon">list of pokemon with this ability [click]</li>
+		<li class="button pokemon">list of pokemon with this ability [click]</li>
+		<li class="button pokemon">list of pokemon with this ability [click]</li>
+	</ul>
+</div>
+<!--MOVES-->
+<div class="moves ">
+<h2>Moves</h2>
+	<ul>
+		<li>search moves [TEXT INPUT]
+		<ul>
+			<li>prompt if string is empty or contains numbers</li>
+			<li>error message if no matching move</li>
+			<li class="button movePage">list moves containing string - link to their pages [click]</li>
+			<li class="button movePage">list moves containing string - link to their pages [click]</li>
+			<li class="button movePage">list moves containing string - link to their pages [click]</li>
+			<li class="button movePage">list moves containing string - link to their pages [click]</li>
+
+		</ul>
+		</li>
+	</ul>
+</div>
+<div class="movePage">
+<h2>Some Move</h2>
+	<ul>
+		<li>name</li>
+		<li>accuracy</li>
+		<li>effect chance</li>
+		<li>pp</li>
+		<li>priority</li>
+		<li>power</li>
+		<li>effect entry</li>
+		<li class="button typePage">type - link to this type page [click]</li>
+		<li>damage class</li>
+		<li>ailment type</li>
+		<li>learn methods
+		<ul>
+			<li>level up [click to show]
+			<ul>
+				<li class="button pokemon">list of pokemon that can learn - link to their pages [click]</li>
+				<li class="button pokemon">list of pokemon that can learn - link to their pages [click]</li>
+				<li class="button pokemon">list of pokemon that can learn - link to their pages [click]</li>
+				<li class="button pokemon">list of pokemon that can learn - link to their pages [click]</li>
+			</ul>
+			</li>
+			<li>breeding [click to show]
+			<ul>
+				<li class="button pokemon">list of pokemon that can learn - link to their pages [click]</li>
+				<li class="button pokemon">list of pokemon that can learn - link to their pages [click]</li>
+				<li class="button pokemon">list of pokemon that can learn - link to their pages [click]</li>
+				<li class="button pokemon">list of pokemon that can learn - link to their pages [click]</li>
+			</ul>
+			</li>
+			<li>TM/HM [click to show]
+			<ul>
+				<li class="button pokemon">list of pokemon that can learn - link to their pages [click]</li>
+				<li class="button pokemon">list of pokemon that can learn - link to their pages [click]</li>
+				<li class="button pokemon">list of pokemon that can learn - link to their pages [click]</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+	</ul>
+</div>
+<!--POKEMON-->
+<div class="pokemonSearch ">
+<h2>Pokemon</h2>
+	<ul>
+		<li>by number [TEXT INPUT]
+		<ul>
+			<li>accept only integers</li>
+			<li class ="button pokemon">go to matching pokemon page [click]</li>
+			<li>error if no matching number</li>
+		</ul>
+		</li>
+		<li>by name [TEXT INPUT]
+		<ul>
+			<li class="button pokemon">list pokemon containing string - link to their pages [click]</li>
+			<li>prompt if string is empty or contains numbers</li>
+			<li>error message if no matching pokemon</li>
+		</ul>
+		</li>
+		<li>by type 
+		<ul>
+			<li class="button typePage">list types to select from - link to a type page [click]</li>
+			<li class="button typePage">list types to select from - link to a type page [click]</li>
+			<li class="button typePage">list types to select from - link to a type page [click]</li>
+			<li class="button typePage">list types to select from - link to a type page [click]</li>
+		</ul>
+		</li>
+	</ul>
+</div>
+<div class="pokemon">
+	<h2>Some Pokemon</h2>
+	<ul>
+		<li>image</li>
+		<li>number</li>
+		<li class="button typePage">types - link to type page [click]</li>
+		<li class="button aRegion">region - link to region dex [click]</li>
+		<li>evolution</li>
+		<li>ablities
+		<ul>
+			<li class="button abilityPage">ability - link to ability's page [click]</li>
+			<li class="button abilityPage">ability - link to ability's page [click]</li>
+			<li class="button abilityPage">ability - link to ability's page [click]</li>
+		</ul>
+		</li>
+		<li>matchups
+		<ul>
+			<li>type advantage chart (table)</li>
+			<li class="button typePage">clickable types, go to type page [click]</li>			
+		</ul>
+		</li>
+		<li>moves the pokemon can learn through
+		<ul>
+			<li>level up</li>
+			<li>TM/HM</li>
+			<li>breeding</li>
+		</ul>
+		</li>
+		<li>Locations
+		<ul>
+			<li>list generations and game versions' locations</li>
+		</ul>
+		</li>
+	</ul>
+</div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
