@@ -8,15 +8,7 @@ div{
 	display:block;
 	float:left;
 }
-p{
-	width:400px;
-	height:160px;
-	position:fixed;
-top:20px;
-left:550px;
-border:2px solid plum;
-padding:7px;
-}
+
 .linky{
 	color:blue;
 }

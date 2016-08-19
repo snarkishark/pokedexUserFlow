@@ -21,11 +21,12 @@ $(function(){
 	});
 	$(".types").on('click',function(e){
 		getRequest("type","");
-	})
+	});
 	
 });
 
 function getRequest(query1,query2){
+	//parameters
 	var query1 = query1;
 	var query2 = query2;
 	url = 'http://pokeapi.co/api/v2/'+query1+"/"+query2;
@@ -44,6 +45,12 @@ function getRequest(query1,query2){
 		});
 };
 
+function goToURL(url,name,displayItem){
+	$.getJSON(url, function(dataObj){
+			listResults(name,displayItem,dataObj);
+	});	
+//	console.log(data.responseText);	
+}
 
 //insert results into the DOM and add event listeners to list items
 function listResults(item, displayItem,data){
@@ -66,8 +73,9 @@ function listAbilities(data){
 	var dataSet = data.results;
 	$.each (dataSet, function(index,value){
 		var abilityName = dataSet[index].name;
-		listResults(abilityName,displayAbility,dataSet[index]);
-	});//api call for abilities
+		var dataURL = dataSet[index].url;
+		getURL(dataURL,abilityName,displayAbility);	
+	});
 };
 
 function listTypes(data){
@@ -75,7 +83,9 @@ function listTypes(data){
 	var dataSet = data.results;
 	$.each (dataSet, function(index,value){
 		var typeName = dataSet[index].name;
-		listResults(typeName,displayType);
+		var dataURL = dataSet[index].url;
+		goToURL(dataURL,typeName,displayType);
+		//listResults(typeName,displayType,data);
 	})
 };
 function listPokemon(query, data){
@@ -89,9 +99,13 @@ function listPokemon(query, data){
 
 	}else if (query == "ability"){
 		var dataSet = data.pokemon;
-		console.log(dataSet);
 	}else if (query =="type"){
-
+		var dataSet = data.pokemon;
+		$.each(dataSet, function(index,value){
+			var pokemon = dataSet[index].pokemon;
+			goToURL(pokemon.url,pokemon.name,displayPokemon);
+		});
+		
 	}
 };
 //This function gets and displays information of a certain region. Takes a parameter "someRegion"
@@ -100,17 +114,25 @@ function displayRegion(region){
 };
 
 //This function gets and displays information of a certain Ability. Takes a parameter "someAbility"
-function displayAbility(data){
+function displayAbility(ability){
+	var abilitySheet = $(".ability").clone().removeClass("hidden");
+	abilitySheet.find(".title").text(ability.name);
+	abilitySheet.find(".entry").text(ability.effect_entries[0].effect);
 	$(".results ul").empty();
-	console.log(data);
-	$(".results").append(
-		addTitle(data.name);
-		);
+	$(".container").append(abilitySheet);	
+
 };
 
 //This function gets and displays information of a certain type. Takes a parameter "someType"
 function displayType(type){
-	console.log(type);//get request to API
+	var pokemon = type.pokemon;
+	var typeSheet = $(".ability").clone().removeClass("hidden");
+	typeSheet.find(".title").text(type.name);
+	listPokemon("type",type);
+		
+	//$(typeSheet).
+	$(".results").append(typeSheet);
+	
 };
 
 //This function gets and displays information of a certain pokemon. Takes a parameter "somePokemon"
